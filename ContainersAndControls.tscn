@@ -1,0 +1,69 @@
+[gd_scene format=2]
+
+[node name="ContainersAndControls" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -100.0
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 400, 200 )
+color = Color( 0.654902, 0.678431, 0.776471, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 20.0
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+margin_right = 67.0
+margin_bottom = 20.0
+text = "Button 1"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer"]
+margin_left = 71.0
+margin_top = 3.0
+margin_right = 389.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "This is a test of the emergency broadcast system."
+
+[node name="Control" type="Control" parent="ColorRect/VBoxContainer"]
+margin_top = 24.0
+margin_right = 400.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/Control"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "I don't belong here"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+margin_top = 128.0
+margin_right = 400.0
+margin_bottom = 148.0
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+margin_top = 3.0
+margin_right = 318.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "This is a test of the emergency broadcast system."
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+margin_left = 322.0
+margin_right = 389.0
+margin_bottom = 20.0
+text = "Button 1"
